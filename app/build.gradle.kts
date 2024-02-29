@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.misoramen.anmpweek1"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.misoramen.anmpweek1"

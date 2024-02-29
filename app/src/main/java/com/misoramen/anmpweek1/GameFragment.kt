@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.misoramen.anmpweek1.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {
@@ -20,5 +21,13 @@ class GameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if(arguments != null){
+            val playerName = GameFragmentArgs.fromBundle(requireArguments()).name
+            binding.textViewTurn.text = "$playerName's Turn"
+        }
+        binding.buttonBack.setOnClickListener {
+            val action = GameFragmentDirections.actionMainFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
     }
 }
