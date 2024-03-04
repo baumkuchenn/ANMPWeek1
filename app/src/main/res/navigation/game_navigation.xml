@@ -16,8 +16,8 @@
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right" />
         <argument
-            android:name="name"
-            app:argType="string" />
+            android:name="score"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
