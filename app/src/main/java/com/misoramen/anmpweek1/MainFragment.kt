@@ -50,5 +50,10 @@ class MainFragment : Fragment() {
             binding.txtNumber1.text = number1.toString()
             binding.txtNumber2.text = number2.toString()
         }
+
+        binding.btnOption.setOnClickListener {
+            val action = MainFragmentDirections.actionOptionFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
     }
 }
